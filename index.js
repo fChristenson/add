@@ -1,34 +1,66 @@
-const add = require("./src/libs/add_any_of_same_type");
+const {
+  addNumbers,
+  addStrings,
+  addArrays,
+  addObjects,
+  addAnyOfSameType,
+  addTo,
+  addBooleans
+} = require("./src/libs");
 
-console.log(add.addNumbers(1, 1));
+console.log(addNumbers(1, 1));
 console.log("--------------------------");
 
-console.log(add.addStrings("foo", "bar"));
+console.log(addStrings("foo", "bar"));
 console.log("--------------------------");
 
-console.log(add.addArrays([1], [2]));
+console.log(addArrays([1], [2]));
 console.log("--------------------------");
 
-console.log(add.addObjects({ foo: 1 }, { bar: 1 }));
+console.log(addObjects({ foo: 1 }, { bar: 1 }));
 console.log("--------------------------");
 
-console.log(add.addBooleans(true, false));
+console.log(addBooleans(true, false));
 console.log("--------------------------");
 
 console.log("Results from our anyOfSameType");
 console.log("--------------------------");
 
-console.log(add.addAnyOfSameType(1, 1));
+console.log(addAnyOfSameType(1, 1));
 console.log("--------------------------");
 
-console.log(add.addAnyOfSameType("foo", "bar"));
+console.log(addAnyOfSameType("foo", "bar"));
 console.log("--------------------------");
 
-console.log(add.addAnyOfSameType([1], [2]));
+console.log(addAnyOfSameType([1], [2]));
 console.log("--------------------------");
 
-console.log(add.addAnyOfSameType({ foo: 1 }, { bar: 1 }));
+console.log(addAnyOfSameType({ foo: 1 }, { bar: 1 }));
 console.log("--------------------------");
 
-console.log(add.addAnyOfSameType(true, false));
+console.log(addAnyOfSameType(true, false));
+console.log("--------------------------");
+
+console.log("Results from our addTo");
+console.log("--------------------------");
+
+console.log(addTo(1, 1));
+console.log("--------------------------");
+
+console.log(addTo("foo", "bar"));
+console.log("--------------------------");
+
+console.log(addTo([1], [2]));
+console.log("--------------------------");
+
+console.log(addTo({ foo: 1 }, { bar: 1 }));
+console.log("--------------------------");
+
+console.log(addTo(true, false));
+console.log("--------------------------");
+
+console.log(addTo(1, []));
+console.log("--------------------------");
+
+console.log(addTo(1, {}, { propName: "bar" }));
 console.log("--------------------------");
