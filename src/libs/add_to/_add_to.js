@@ -9,7 +9,6 @@ const addTo = (a, b, options) => {
   if (Array.isArray(a)) return a.concat([b]);
   if (Array.isArray(b)) return b.concat([a]);
 
-  // remember, we don't know what options is or if it's even there
   const propName = get(options, "propName");
   if (canMergeProperty(a, b, propName)) return mergeToObject(a, b, propName);
 
